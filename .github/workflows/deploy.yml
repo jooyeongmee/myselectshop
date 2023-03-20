@@ -42,9 +42,9 @@ jobs:
 
     # (4) AWS 인증 (IAM 사용자 Access Key, Secret Key 활용)
     - name: Configure AWS credentials
-      uses: aws-actions/configure-aws-credentials@v1
+      uses: aws-actions/configure-aws-credentials@v2
       with:
-        aws-user: ${{secrets.AWS_IAM_USERNAME}}
+        role-to-assume: arn:aws:iam::339164066992:user/my-github-actions-iam-user2
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ${{ env.AWS_REGION }}
 
