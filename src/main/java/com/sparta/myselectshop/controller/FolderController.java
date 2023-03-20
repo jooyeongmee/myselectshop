@@ -34,7 +34,7 @@ public class FolderController {
         System.out.println("user.getUser().getId() = " + userDetails.getUser().getId());
         System.out.println("======================================================");
 
-        return folderService.addFolders(folderNames, userDetails.getUser());
+        return folderService.addFolders(folderNames, userDetails.getUsername());
     }
 
     // 회원이 등록한 모든 폴더 조회
