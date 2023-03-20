@@ -44,6 +44,8 @@ jobs:
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
+        aws-access-username: ${{secrets.AWS_IAM_USERNAME}}
+        aws-access-console-url: ${{secrets.AWS_CONSOLE_LOGINURL}}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ${{ env.AWS_REGION }}
 
